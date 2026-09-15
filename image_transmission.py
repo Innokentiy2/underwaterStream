@@ -3,7 +3,7 @@ from picamera2 import Picamera2
 from PIL import Image
 import numpy as np
 from gpiozero import OutputDevice
-
+ 
 
 RELAY_GPIO = 17
 BIT_S = 0.25
