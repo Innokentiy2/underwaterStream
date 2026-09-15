@@ -6,8 +6,6 @@ over a laser link using Raspberry Pi, Arduino, a photodiode, and Python.
 > Status: working laboratory prototype in air.  
 > Underwater testing is planned as the next stage.
 
-![System architecture](docs/architecture.png)
-
 ## Overview
 
 Radio communication performs poorly underwater because electromagnetic waves are
@@ -79,60 +77,3 @@ for precise alignment between the laser and photodiode.
 - Add error detection or correction.
 - Test the system in water at different distances and turbidity levels.
 - Design a waterproof enclosure for the transmitter.
-
-## Repository structure
-
-```text
-transmitter/  Raspberry Pi image capture and laser control
-receiver/     Arduino receiver firmware
-visualizer/   Python/Pygame frame visualizer
-hardware/     Components, pinout, and hardware notes
-docs/         Schematics, report, and technical documentation
-media/        Photos, screenshots, and demo materials
-```
-
-## Running the project
-
-### Raspberry Pi transmitter
-
-```bash
-pip install -r requirements.txt
-python transmitter/image_transmission.py
-```
-
-Before running, configure the correct GPIO pin, camera settings, frame size, threshold,
-and bit duration in `image_transmission.py`.
-
-### Arduino receiver
-
-Upload `receiver/receiver.ino` to the Arduino board and adjust the following values
-if required:
-
-- `sensorPin`
-- `BIT_MS`
-- `SAMPLES_PER_BIT`
-- baseline and threshold parameters
-
-### Visualizer
-
-```bash
-pip install pyserial pygame
-python visualizer/visualize.py
-```
-
-Set the correct serial port in `visualize.py` before launching it.
-
-## Media
-
-Add photos of the transmitter, receiver, laser alignment, and the reconstructed frame
-to the `media/` directory. A short demonstration video or GIF is recommended.
-
-## Author
-
-[Your name or GitHub username]
-
-Built as an educational engineering project in 2026.
-
-## License
-
-This project is available under the MIT License.
