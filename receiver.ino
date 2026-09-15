@@ -1,5 +1,5 @@
 const int sensorPin = A0;
-
+ 
 const int BIT_MS = 300;
 const int SAMPLES_PER_BIT = 10;
 
